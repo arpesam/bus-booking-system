@@ -143,7 +143,7 @@ export default {
         });
     },
     openWP(phone_number) {
-      window.open(`https://web.whatsapp.com/?phone=${phone_number}`, "_blank");
+      window.open(`https://web.whatsapp.com/send?phone=${phone_number}`, "_blank");
     },
   }
 };
