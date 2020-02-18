@@ -1,4 +1,6 @@
-# vuetify-playground
+# Bus Booking App
+
+A tiny app to control bus bookings
 
 ## Project setup
 ```
