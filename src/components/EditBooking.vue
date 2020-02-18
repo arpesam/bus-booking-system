@@ -98,6 +98,9 @@ export default {
       type: String,
       required: true
     },
+    phone_number: {
+      type: String,
+    },
     amountPaid: {
       type: String,
       required: true
@@ -191,12 +194,13 @@ export default {
   },
   mounted() {
     this.booking.rg = this.rg;
+    this.booking.id = this.id;
     this.booking.name = this.name;
     this.booking.rest = this.rest;
     this.booking.date = this.date;
     this.booking.seat = this.seat;
     this.booking.amountPaid = this.amountPaid;
-    this.booking.id = this.id;
+    this.booking.phone_number = this.phone_number;
   }
 };
 </script>

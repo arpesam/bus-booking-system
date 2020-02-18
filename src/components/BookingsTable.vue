@@ -110,7 +110,6 @@ export default {
     },
     editBooking(payload) {
       this.bookingPayload = payload;
-      console.log('id -> ', payload)
       this.modalEditBooking = true;
     },
     openConfirmModal(id) {

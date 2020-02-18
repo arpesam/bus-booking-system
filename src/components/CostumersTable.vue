@@ -41,21 +41,6 @@
       </template>
     </v-simple-table>
 
-    <v-row>
-      <v-col cols="8" md="6">
-        <v-text-field
-          v-model="height"
-          class="mx-4"
-          label="Height - px"
-          max="500"
-          min="1"
-          step="1"
-          style="width: 125px"
-          type="number"
-          @keydown="false"
-        ></v-text-field>
-      </v-col>
-    </v-row>
     <edit-costumer
       v-if="costumer.id"
       :name-prop="costumer.name"
