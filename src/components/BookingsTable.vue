@@ -15,8 +15,8 @@
             <th class="text-left">Val. Pass.</th>
             <th class="text-left">Val. Pago.</th>
             <th class="text-left">Saldo</th>
-            <th class="text-left">Excluir</th>
             <th class="text-left">Editar</th>
+            <th class="text-left">Excluir</th>
             <th class="text-left">WP</th>
           </tr>
         </thead>
@@ -71,22 +71,6 @@
       :dialog-prop="modalEditBooking"
       @change="setBookingDialog"
     />
-
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-text-field
-          v-model="height"
-          class="mx-4"
-          label="Height - px"
-          max="500"
-          min="1"
-          step="1"
-          style="width: 125px"
-          type="number"
-          @keydown="false"
-        ></v-text-field>
-      </v-col>
-    </v-row>
   </div>
 </template>
 

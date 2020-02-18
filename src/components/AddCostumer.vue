@@ -15,7 +15,7 @@
                 <v-text-field label="RG *" v-model="rg" required></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-text-field label="Celular *" v-model="phone_number" required></v-text-field>
+                <v-text-field label="Celular *" placeholder="5511999999999" v-model="phone_number" required></v-text-field>
               </v-col>
             </v-row>
           </v-container>

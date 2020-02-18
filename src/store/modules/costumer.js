@@ -22,7 +22,7 @@ const actions = {
   },
 
   async listCostumers({ state, commit }) {
-    commit('booking/setCostumerList', null);
+    commit('setCostumerList', null);
     const costumersArray = [];
     const costumers = await _costumersCollection.get();
 

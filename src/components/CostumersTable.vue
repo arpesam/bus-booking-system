@@ -10,6 +10,7 @@
             <th class="text-left">Reserva</th>
             <th class="text-left">Editar</th>
             <th class="text-left">Excluir</th>
+            <th class="text-left">WP</th>
           </tr>
         </thead>
         <tbody>
@@ -28,6 +29,11 @@
             <td>
               <v-btn outlined x-small fab color="red" @click.stop="openConfirmModal(costumer.id)">
                 <v-icon>delete</v-icon>
+              </v-btn>
+            </td>
+            <td>
+              <v-btn outlined x-small fab color="green" @click.prevent="openWP(costumer.phone_number)">
+                <v-icon>mdi-whatsapp</v-icon>
               </v-btn>
             </td>
           </tr>
@@ -150,7 +156,10 @@ export default {
         }).catch(function(error) {
           this.errorMessage = 'Houve um erro, tente novamente';
         });
-    }
+    },
+    openWP(phone_number) {
+      window.open(`https://web.whatsapp.com/?phone=${phone_number}`, "_blank");
+    },
   }
 };
 </script>

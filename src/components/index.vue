@@ -14,6 +14,14 @@
             >Add Cadastro</v-btn>
 
             <v-btn
+              color="warning"
+              class="mx-2 my-1"
+              @click="doPrint"
+              depressed
+              small
+            >Imprimir</v-btn>
+
+            <v-btn
               v-show="!showCostumers"
               color="secondary"
               class="mx-2 my-1"
@@ -102,22 +110,27 @@ export default {
     setAddCostumerDialog(value) {
       this.modalAddCostumer = value;
     },
-
     openModalToEditBrother(brotherData) {
       console.log("opening modal", brotherData);
       this.brother = { ...brotherData };
       this.brotherComponentKey += 1;
       this.dialog = true;
     },
-
     async editBooking(bookingData) {
       this.booking = { ...bookingData };
       this.bookingComponentKey += 1;
       this.bookingDialog = true;
-    }
+    },
+    doPrint() {
+      let routeData = this.$router.resolve({ name: 'PrintBookings' });
+
+      if (this.showCostumers)
+        routeData = this.$router.resolve({ name: 'PrintCostumers' });
+      
+      window.open(routeData.href, "myWindow", "width=876px, height=980px");
+    },
   },
   mounted() {
-    // this.$store.getters['bookings/bookingList']
     this.$store.dispatch("booking/fetchBookingList");
     this.$store.dispatch("costumer/listCostumers");
   }

@@ -10,6 +10,16 @@ const routes = [
     name: 'Home',
     component: () => import('../views/Home.vue'),
   },
+  {
+    path: '/print/bookings',
+    name: 'PrintBookings',
+    component: () => import('../views/PrintBookings.vue'),
+  },
+  {
+    path: '/print/costumers',
+    name: 'PrintCostumers',
+    component: () => import('../views/PrintCostumers.vue'),
+  },
 ];
 
 const router = new VueRouter({
