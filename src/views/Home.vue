@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <hello-world></hello-world>
-  </div>
+  <v-layout>
+    <v-flex>
+      <booking-system></booking-system>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
+import BookingSystem from '@/components/index.vue';
 
 export default {
   components: {
-    HelloWorld,
+    BookingSystem,
   },
   methods: {
     openWin() {
